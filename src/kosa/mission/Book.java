@@ -1,8 +1,8 @@
 package kosa.mission;
 
 public class Book {
-	int FullPr; 
-	String Name;
+	private int FullPr; 
+	private String Name;
 
 	public Book () {}
 	

@@ -1,9 +1,9 @@
 package kosa.oop;
 
 public class Account {
-	String accountNo;
-	String ownerName;
-	int balance;
+	private String accountNo;
+	private String ownerName;
+	private int balance;
 	
 	public Account () {}
 	
