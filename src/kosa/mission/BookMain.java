@@ -2,13 +2,18 @@ package kosa.mission;
 
 public class BookMain {
 	public static void main(String[] args) {
-		Book JAVA = new Book(30000, "JAVA");
-		Book JSP = new Book(20000, "JSP");
-		Book Oracle = new Book(15000, "Oracle");
+		int total = 0;
 		
-		JAVA.print(JAVA.DiscCal());
-		JSP.print(JSP.DiscCal());
-		Oracle.print(Oracle.DiscCal());
-		System.out.println("รั ฑÝพื: " + (JAVA.DiscCal()+ JSP.DiscCal()+ Oracle.DiscCal()));
+		Book arr[] = {
+				new Book(30000, "JAVA"),
+				new Book(20000, "JSP"),
+				new Book(15000, "Oracle")
+		};
+		
+		for(Book b : arr) {
+			b.print(b.DiscCal());
+			total += b.DiscCal();
+		}
+		System.out.println("รั ฑÝพื: " + total);
 	}
 }
