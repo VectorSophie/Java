@@ -1,2 +1,2 @@
 # Java
-New
+Not gay
