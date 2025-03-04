@@ -1,4 +1,4 @@
-package kosa.mission;
+package kosa.oop;
 
 public class Book {
 	private int FullPr; 
