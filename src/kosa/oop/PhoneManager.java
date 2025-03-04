@@ -10,6 +10,7 @@ public class PhoneManager {
 	public PhoneManager () {
 		arr = new PhoneBook [5];
 		sc = new Scanner(System.in);
+		int count = 0;
 	}
 	public void addName () {
 		System.out.println("¿Ã∏ß: ");
