@@ -82,6 +82,28 @@ public class BankSystem {
 					}
 				}
 				
+			}else if(menu.equals("5")){
+				
+				System.out.print("고객의 ID를 입력하세요.: ");
+				id = readFromKeyboard();
+				
+				Customer cust = MyBank.getCustomer(id);
+				
+				if(cust == null){
+					System.out.println("등록된 고객이 아닙니다.");
+				
+				}else{
+					System.out.print("입금액을 입력하세요: ");
+					balance = Long.parseLong(readFromKeyboard());
+					
+					if(cust.getAccount().deposit(balance)){
+						System.out.println("정상적으로 출금되었습니다.");
+						System.out.println("출금후 잔고는 :" + cust.getAccount().getBalance());
+					}else{
+						System.out.println("잔고가 부족합니다.");
+					}
+				}
+				
 			}
 			
 			

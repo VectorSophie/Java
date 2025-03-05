@@ -1,7 +1,5 @@
 package kosa.Bank;
 
-import kosa.Relation.Student;
-
 public class MyBank {
 	private Customer[] customers;
 	private int customersNum;
@@ -33,9 +31,7 @@ public class MyBank {
 	public Customer[] getAllCustomer () {
 		Customer[] totalCustomer = new Customer[customersNum];
 		
-		for (int i=0; i<customersNum; i++) {
-			totalCustomer[i] = customers[i];
-		}
+		System.arraycopy(customers, 0, totalCustomer, 0, customersNum);
 		
 		return totalCustomer;
 	}

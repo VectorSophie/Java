@@ -20,8 +20,9 @@ public class Account {
 		return balance;
 	}
 	
-	public void deposit (long amount) {
+	public boolean deposit (long amount) {
 		balance += amount;
+		return true;
 	}
 	
 	public boolean withdraw (long amount) {
