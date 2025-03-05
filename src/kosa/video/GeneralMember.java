@@ -9,8 +9,7 @@ public class GeneralMember {
 	private String memberId;
 	private String memberName;
 	private String memberAdd;
-	private int BorrowedVideo;
-	private List<Video> dvds;
+	private Video dvd;
 	
 	public GeneralMember() {}
 
@@ -19,7 +18,6 @@ public class GeneralMember {
 		this.memberId = memberId;
 		this.memberName = memberName;
 		this.memberAdd = memberAdd;
-		dvds = new ArrayList<Video>();
 	}
 
 	public String getMemberId() {
@@ -45,19 +43,15 @@ public class GeneralMember {
 	public void setMemberAdd(String memberAdd) {
 		this.memberAdd = memberAdd;
 	}
-	public void borrow (Video dvd) {
-		dvds.add(dvd);
-		dvd.borrowMember(this);
+	
+	public void rental(Video dvds) {
+		this.dvd = dvds;
 	}
 	
-	public void printInfo () {
-		System.out.println("회원의 아이디: " + memberId);
-		for(Video dvd: dvds) {
-			System.out.println("회원의 이름: " + memberName);
-			System.out.println("회원의 주소: " + memberAdd);
-			System.out.println("회원이 대여한 비디오 번호: " + dvd.getVideoNum());
-			System.out.println("회원이 대여한 비디오 제목: " + dvd.getVideoName());
-			System.out.println("회원이 대여한 비디오 주인공: " + dvd.getVideoProtagon());
-		}
+	public void print() {
+		System.out.println("회원 아이디: " + memberId);
+		System.out.println("회원 이름: " + memberName);
+		System.out.println("회원 주소: " + memberAdd);
+		dvd.show();
 	}
 }

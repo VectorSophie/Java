@@ -9,7 +9,6 @@ public class Video {
 	private int videoNum;
 	private String videoName;
 	private String videoProtagon;
-	private List<GeneralMember> Gmembers;
 	
 	public Video () {}
 	
@@ -18,7 +17,6 @@ public class Video {
 		this.videoNum = videoNum;
 		this.videoName = videoName;
 		this.videoProtagon = videoProtagon;
-		Gmembers = new ArrayList<GeneralMember>();
 	}
 
 	public int getVideoNum() {
@@ -45,14 +43,11 @@ public class Video {
 		this.videoProtagon = videoProtagon;
 	}
 	
-	public void borrowMember (GeneralMember Gmember) {
-		Gmembers.add(Gmember);
+	public void show() {
+		System.out.println("회원이 빌린 비디오 번호: " + videoNum);
+		System.out.println("회원이 빌린 비디오 제목: " + videoName);
+		System.out.println("회원이 빌린 비디오 주인공: " + videoProtagon);
 	}
 	
-//	public void printVideo () {
-//		System.out.println("비디오명: "+ videoName);
-//		for (GeneralMember Gmember: Gmembers) {
-//			System.out.println("대여한 사람: "+ Gmember.getMemberName());
-//		}
-	
+
 }

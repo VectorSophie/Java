@@ -10,12 +10,10 @@ public class Main {
 		GeneralMember g2 = new GeneralMember("www", "박", "경북 경산");
 		GeneralMember g3 = new GeneralMember("eee", "이", "부산");
 		
-		g3.borrow(v1);
-		g2.borrow(v3);
-		g1.borrow(v2);
+		g3.rental(v1);
+		g2.rental(v3);
+		g1.rental(v2);
 		
-		g1.printInfo();
-		g2.printInfo();
-		g3.printInfo();
+		g1.print();
 	}
 }
