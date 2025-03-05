@@ -24,6 +24,7 @@ public class BankSystem {
 			System.out.println("2. 고객보기(1명)");
 			System.out.println("3. 고객전체보기");
 			System.out.println("4. 고객예금출금");
+			System.out.println("5. 고객예금입금");
 			System.out.println("***끝내기***");
 			System.out.println("***************");
 			System.out.print(">>");			

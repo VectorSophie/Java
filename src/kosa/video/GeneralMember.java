@@ -45,13 +45,21 @@ public class GeneralMember {
 	}
 	
 	public void rental(Video dvds) {
-		this.dvd = dvds;
+		this.setDvd(dvds);
 	}
 	
 	public void print() {
 		System.out.println("회원 아이디: " + memberId);
 		System.out.println("회원 이름: " + memberName);
 		System.out.println("회원 주소: " + memberAdd);
-		dvd.show();
+		getDvd().show();
+	}
+
+	public Video getDvd() {
+		return dvd;
+	}
+
+	public void setDvd(Video dvd) {
+		this.dvd = dvd;
 	}
 }
