@@ -1,4 +1,4 @@
-package kosa.Oracle;
+package kosa.oop2;
 
 public class OracleDao extends Dao {
 

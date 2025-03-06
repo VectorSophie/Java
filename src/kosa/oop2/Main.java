@@ -1,8 +1,8 @@
-package kosa.Oracle;
+package kosa.oop2;
 
 public class Main {
 	public static void main(String[] args) {
-		OracleDao dao = new OracleDao();
+		MYSQLDao dao = new MYSQLDao();
 		
 		MyService service = new MyService(dao);
 		service.insertService();
