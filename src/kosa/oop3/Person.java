@@ -7,11 +7,13 @@ public class Person {
 	public Person() {}
 
 	public Person(String name, Role role) {
+		super();
 		this.name = name;
 		this.role = role;
 	}
 	
 	public void doIt() {
+		System.out.print(name);
 		role.doing();
 	}
 }
