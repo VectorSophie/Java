@@ -12,5 +12,6 @@ public class Main {
 		
 		Person person = new Person(name, role);
 		person.doIt();
+		sc.close();
 	}
 }
