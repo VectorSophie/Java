@@ -16,5 +16,13 @@ public class CheckingAccount extends Account {
 		}
 		return withdraw(amount);
 	}
+
+	//Override
+	public void printAccount() {
+		super.printAccount();
+		System.out.println("카드 번호: " + cardNo);
+	}
+	
+	
 	
 }
