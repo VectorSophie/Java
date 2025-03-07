@@ -1,14 +1,26 @@
 package kosa.oop3;
 
-import java.util.Scanner;
-
 public class Main {
 	public static void main(String[] args) {
-		Student role = new Student();
-		Scanner sc = new Scanner(System.in);
-  
-		Person person = new Person("È«±æµ¿", role);
+		
+		Person person = new Person("È«±æµ¿", new Role() {
+			@Override
+			public void doing() {
+				System.out.println("Àº ¿îÀüÁß");
+				}
+		});
 		person.doIt();
-		sc.close();
+		
+		
+		Runnable r = () -> {
+			for(int i=1;i<=10;i++) {
+				try {
+					Thread.sleep(1000);
+				} catch(Exception e) {}
+				System.out.println(i);
+			}
+		};
+		Thread t = new Thread(r);
+		t.start();
 	}
 }
