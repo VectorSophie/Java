@@ -116,7 +116,7 @@ public class PhoneManager {
 				for (int j = i; j<count - 1; j++) {
 					arr[j] = arr[j+1];
 				}
-				count--;
+				count --;
 				System.out.println("삭제 완료");
 				break;
 			}
