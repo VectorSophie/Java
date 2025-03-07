@@ -4,13 +4,10 @@ import java.util.Scanner;
 
 public class Main {
 	public static void main(String[] args) {
-		CEO role = new CEO();
+		Student role = new Student();
 		Scanner sc = new Scanner(System.in);
-       
-        System.out.print("ÀÌ¸§: ");
-        String name = sc.nextLine();
-		
-		Person person = new Person(name, role);
+  
+		Person person = new Person("È«±æµ¿", role);
 		person.doIt();
 		sc.close();
 	}

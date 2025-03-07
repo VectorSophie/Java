@@ -1,5 +1,5 @@
 package kosa.oop3;
 
-public abstract class Role {
-	public abstract void doing();
+public interface Role {
+	public void doing();
 }

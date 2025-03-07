@@ -1,6 +1,6 @@
 package kosa.oop3;
 
-public class CEO extends Role {
+public class CEO implements Role {
 	@Override
 	public void doing() {
 		System.out.println("은 총 맞는중");
