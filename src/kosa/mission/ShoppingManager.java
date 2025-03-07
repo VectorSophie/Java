@@ -1,14 +1,15 @@
 package kosa.mission;
 
 import java.util.List;
-
-import kosa.Relation.Student;
+import java.util.ArrayList;
 
 public class ShoppingManager {
 	private Item item;
 	private List<Item> items;
 	
-	public ShoppingManager() {}
+	public ShoppingManager() {
+	    this.items = new ArrayList<>();
+	}
 	
 	public ShoppingManager(Item item, List<Item> items) {
 		this.item = item;
@@ -26,3 +27,4 @@ public class ShoppingManager {
 		}
 	}
 }
+
