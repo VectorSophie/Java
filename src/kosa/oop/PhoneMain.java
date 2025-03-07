@@ -9,7 +9,7 @@ public class PhoneMain {
 		PhoneManager m = new PhoneManager();
 		
 		while(true) {
-			System.out.println("1.추가 2.전체출력 3.검색 4.종료");
+			System.out.println("1.추가 2.전체출력 3.검색 4.수정 5.삭제 6.종료");
 			String menu = sc.nextLine();
 			switch(menu) {
 			case "1":
@@ -22,6 +22,12 @@ public class PhoneMain {
 				m.searchName();
 				break;
 			case "4":
+				m.replaceName();
+				break;
+			case "5":
+				m.deleteName();
+				break;
+			case "6":
 				System.out.println("종료");
 				return;
 			}

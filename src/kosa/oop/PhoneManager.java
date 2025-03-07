@@ -10,7 +10,7 @@ public class PhoneManager {
 	public PhoneManager () {
 		arr = new PhoneBook [5];
 		sc = new Scanner(System.in);
-		int count = 0;
+		this.count = 0;
 		
 	}
 	
@@ -48,6 +48,7 @@ public class PhoneManager {
 		
 		System.out.println("전화번호가 등록되었습니다");
 	}
+	
 	public void showAll () {
 		System.out.println("1.전체 2.동창 3.직장");
 		System.out.println("선택: ");
@@ -88,8 +89,35 @@ public class PhoneManager {
 			if (arr[i].getName().equals(Target)) {
 				arr[i].show();
 				break;
-			} else {
-				System.out.println("일치하는 사용자 없음");
+			}
+		}
+	}
+	
+	public void replaceName () {
+		System.out.println("바꿀 대상 검색: ");
+		String Target = sc.nextLine();
+		for (int i = 0; i<count; i++) {
+			if (arr[i].getName().equals(Target)) {
+				arr[i].show();
+				System.out.println("새 번호: ");
+				String reNumero = sc.nextLine();
+				arr[i] = new PhoneBook(arr[i].getName(), reNumero, arr[i].getBirth());
+				break;
+			}
+		}
+	}
+	
+	public void deleteName	() {
+		System.out.println("삭제할 대상 검색: ");
+		String Target = sc.nextLine();
+		for (int i = 0; i<count; i++) {
+			if (arr[i].getName().equals(Target)) {
+				arr[i].show(); 
+				for (int j = i; j<count - 1; j++) {
+					arr[j] = arr[j+1];
+				}
+				count--;
+				System.out.println("삭제 완료");
 				break;
 			}
 		}
