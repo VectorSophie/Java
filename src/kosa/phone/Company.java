@@ -1,4 +1,4 @@
-package kosa.oop;
+package kosa.phone;
 
 public class Company extends PhoneBook {
 	private String dept;

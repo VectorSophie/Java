@@ -1,4 +1,4 @@
-package kosa.oop;
+package kosa.phone;
 
 import java.util.Scanner;
 
