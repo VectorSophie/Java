@@ -1,6 +1,7 @@
-package kosa.mission;
+package kosa.data;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -11,22 +12,24 @@ public class Re {
 	
 	do {
 		System.out.println("1.데이터 추가 2.데이터 삭제 3.데이터 출력 4.종료");
-		String input = sc.nextLine();
-		switch (input) {
+		switch (sc.nextLine()) {
 		case "1":
 			System.out.println("추가: ");
-			String add = sc.nextLine();
-			list.add(add);
+			list.add(sc.nextLine());
 			break;
 		case "2":
 			System.out.println("삭제: ");
-			String remove = sc.nextLine();
-			list.remove(list.indexOf(remove));
+			list.remove(list.indexOf(sc.nextLine()));
 			break;
 		case "3":
 			System.out.println("출력: ");
-			for(int i=0; i<list.size(); i++)
-			System.out.println(list.get(i));
+			for(int i=0; i<list.size(); i++) 
+				System.out.print(list.get(i) + ",");
+			System.out.println();
+			Iterator<String> iter = list.iterator();
+			while(iter.hasNext()) 
+				System.out.print(iter.next() + ",");
+			System.out.println();
 			break;
 		case "4":
 			System.out.println("종료");
