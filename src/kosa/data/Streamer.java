@@ -28,7 +28,7 @@ public class Streamer {
 		
 		list.stream().
 		filter(n-> n.getName().charAt(0) == 'ȫ').
-		forEach(Student -> System.out.println(Student.getName()));
+		forEach(n -> System.out.println(n.getName()));
 		
 	}
 }
