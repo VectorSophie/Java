@@ -23,8 +23,10 @@ public class Streamer {
 		mapToInt(s -> s.getScore()).
 		forEach(score -> System.out.println(score));
 		
-		list.stream().map(Student::getName).
+		list.stream().
+		map(Student::getName).
 		forEach(name -> System.out.println(name));
+		
 		
 		list.stream().
 		filter(n-> n.getName().charAt(0) == 'ȫ').
