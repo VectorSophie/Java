@@ -30,6 +30,7 @@ public class Writer {
 		}
 		System.out.println("Á¾·á");
 		System.out.println(poem);
+		sc.close();
 	}
 
 }
