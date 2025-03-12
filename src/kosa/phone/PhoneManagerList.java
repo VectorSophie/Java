@@ -113,6 +113,7 @@ public class PhoneManagerList {
     		 e.printStackTrace();
     	 } finally {
     		 try {
+    			 System.out.println("저장 완료.");
     			 out.close(); 
     		 } catch(Exception e2) {
     			 
@@ -129,10 +130,12 @@ public class PhoneManagerList {
    		 e.printStackTrace();
    	 } finally {
    		 try {
+   			System.out.println("불러오기 완료.");
    			 in.close(); 
    		 } catch(Exception e2) {
    			 
    		 }
-   	 }
+   	   }
+   	 
     }
 }
