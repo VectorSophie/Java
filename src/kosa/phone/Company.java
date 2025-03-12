@@ -1,6 +1,8 @@
 package kosa.phone;
 
-public class Company extends PhoneBook {
+import java.io.Serializable;
+
+public class Company extends PhoneBook implements Serializable {
 	private String dept;
 	private String position;
 	
@@ -15,12 +17,15 @@ public class Company extends PhoneBook {
 	public String getDept() {
 		return dept;
 	}
+	
 	public void setDept(String dept) {
 		this.dept = dept;
 	}
+	
 	public String getPostion() {
 		return position;
 	}
+	
 	public void setPostion(String postion) {
 		this.position = postion;
 	}

@@ -1,6 +1,8 @@
 package kosa.phone;
 
-public class Colleague extends PhoneBook {
+import java.io.Serializable;
+
+public class Colleague extends PhoneBook implements Serializable {
 	private String major;
 	private String year;
 	
@@ -34,6 +36,4 @@ public class Colleague extends PhoneBook {
 		System.out.println("전공: " + major);
 		System.out.println("학번: " + year);
 	}
-	
-	
 }

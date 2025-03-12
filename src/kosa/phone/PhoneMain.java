@@ -10,7 +10,7 @@ public class PhoneMain {
 		PhoneManagerList l = new PhoneManagerList();
 		
 		while(true) {
-			System.out.println("1.추가 2.전체출력 3.검색 4.수정 5.삭제 6.종료");
+			System.out.println("1.추가 2.전체출력 3.검색 4.수정 5.삭제 6.저장 7.불러오기 8.종료");
 			String menu = sc.nextLine();
 			switch(menu) {
 			case "1":
@@ -29,6 +29,12 @@ public class PhoneMain {
 				l.deleteName();
 				break;
 			case "6":
+				l.phoneOut();
+				break;
+			case "7":
+				l.phoneIn();
+				break;
+			case "8":
 				System.out.println("종료");
 				return;
 			}

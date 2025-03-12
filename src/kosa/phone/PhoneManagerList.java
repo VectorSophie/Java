@@ -1,5 +1,9 @@
 package kosa.phone;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -98,5 +102,37 @@ public class PhoneManagerList {
             }
         }
         System.out.println("대상을 찾을 수 없습니다.");
+    }
+    
+    public void phoneOut() {
+    		ObjectOutputStream out = null;
+    	 try {
+    		 out = new ObjectOutputStream(new FileOutputStream("save.ser"));
+    		 out.writeObject(list);
+    	 } catch (Exception e) {
+    		 e.printStackTrace();
+    	 } finally {
+    		 try {
+    			 out.close(); 
+    		 } catch(Exception e2) {
+    			 
+    		 }
+    	 }
+    }
+    
+    public void phoneIn() {
+    	ObjectInputStream in = null;
+   	 try {
+   		 in = new ObjectInputStream(new FileInputStream("save.ser"));
+   		 list = (List)in.readObject();
+   	 } catch (Exception e) {
+   		 e.printStackTrace();
+   	 } finally {
+   		 try {
+   			 in.close(); 
+   		 } catch(Exception e2) {
+   			 
+   		 }
+   	 }
     }
 }

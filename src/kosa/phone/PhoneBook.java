@@ -1,6 +1,8 @@
 package kosa.phone;
 
-public class PhoneBook {
+import java.io.Serializable;
+
+public class PhoneBook implements Serializable {
 	private String Name;
 	private String Number;
 	private String Birth;
