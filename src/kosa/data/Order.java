@@ -6,16 +6,14 @@ import java.util.LinkedList;
 public class Order {
 	private Food food;
 	private int amount;
-	private LinkedList<Food> list;
+	private int total;
 	
-	public Order() {
-		this.list = new LinkedList<>();
-	}
+	public Order() {}
 	
-	public Order(Food food, int amount, LinkedList list) {
+	public Order(Food food, int amount) {
 		this.food = food;
 		this.amount = amount;
-		this.list = list;
+		this.total = food.getPrice() * amount;
 	}
 	public Food getFood() {
 		return food;
@@ -30,25 +28,18 @@ public class Order {
 		this.amount = amount;
 	}
 	
-	public void newOrder(Food food, int amount) {
-		for (int i=0; i<amount; i++)
-		list.offer(food);
+	public int getTotal() {
+		return total;
+	}
+
+	public void setTotal(int total) {
+		this.total = total;
 	}
 	
-	public void printOrder() {
-		while(!list.isEmpty()) {
-			System.out.println(list.poll());
-		}
+	public void show() {
+		food.show();
+		System.out.println("주문수량: " + amount);
+		System.out.println("주문가격: " + total);
 	}
 	
-	public void total() {
-		Iterator<Food> iter = list.iterator();
-		int i = 0;
-		while(iter.hasNext()) {
-			i += iter.next().getPrice() * amount;
-		}
-		System.out.println(i);
-			
-	}
-		
 }

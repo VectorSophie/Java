@@ -52,9 +52,9 @@ public class PhoneManagerList {
         System.out.print("선택: ");
         int input = Integer.parseInt(sc.nextLine());
 
-        for (PhoneBook pb : list) {
-            if (input == 1 || (input == 2 && pb instanceof Colleague) || (input == 3 && pb instanceof Company)) {
-                pb.show();
+        for (PhoneBook p : list) {
+            if (input == 1 || (input == 2 && p instanceof Colleague) || (input == 3 && p instanceof Company)) {
+                p.show();
             }
         }
     }
@@ -62,9 +62,9 @@ public class PhoneManagerList {
     public void searchName() {
         System.out.print("검색: ");
         String Target = sc.nextLine();
-        for (PhoneBook pb : list) {
-            if (pb.getName().equals(Target)) {
-                pb.show();
+        for (PhoneBook p : list) {
+            if (p.getName().equals(Target)) {
+                p.show();
                 return;
             }
         }

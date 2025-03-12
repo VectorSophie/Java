@@ -4,29 +4,27 @@ import java.util.Scanner;
 import java.util.Stack;
 
 public class Matematica {
-	public static boolean MathMatch(String str) {
-		Stack <String> Math = new Stack<String>();
-		
-			if (str.contains("(") ) {
-				Math.push("(");
-			} else if (str.contains(")") ) {
-				if(Math.isEmpty()) {
-					return false;
-				}
-				Math.pop();
-				}
-			return Math.isEmpty();
-	}
-	
-
-
 	public static void main(String[] args) {
-		String input = "(2+3)))*5 = 25";
-		if(MathMatch(input)) {
-			System.out.println("예~");
-		} else {
-			System.out.println("아니오~");
+		String str = "(2+3)*5 = 25";
+		Stack <String> Math = new Stack<String>();
+		try {
+			for(int i=0; i<str.length(); i++) {
+				char ch = str.charAt(i);
+				if(ch == '(') {
+					Math.push(ch+"");
+				} else if (ch == ')') {
+					Math.pop();
+				}
+			}
+			if (Math.isEmpty()) {
+				System.out.println("tttt");
+			} else {
+				System.out.println("ffff");
+			}
+		} catch(Exception e) {
+			System.out.println("fff");
 		}
-	
+		
 	}
 }
+

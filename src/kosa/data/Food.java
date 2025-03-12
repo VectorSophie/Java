@@ -26,9 +26,9 @@ public class Food {
 	public void setPrice(int price) {
 		this.price = price;
 	}
-	
-	@Override
-	public String toString() {
-	    return foodName + " - " + price + "원";
+
+	public void show() {
+		System.out.println("메뉴: " + foodName);
+		System.out.println("가격: " + price);
 	}
 }
